@@ -1,0 +1,302 @@
+/* Header styling */
+header {
+    background-color: black;
+    padding: 10px 0;
+    border-bottom: 1px solid seashell;
+    position: fixed; /* Makes the header fixed as per spec */
+    width: 100%; /* Ensures the header spans the full width */
+    top: 0;
+    z-index: 1000; /* Ensures it stays above other content */
+    display: flex;
+    justify-content: space-between; /* Align logo and nav */
+    align-items: center; /* Vertically centers content */
+}
+
+/* Logo styling */
+.logo {
+    height: 50px; /* Sets the logo height as per spec */
+    padding-left: 10px;
+    display: inline-block;
+}
+
+/* Navigation Container */
+nav {
+    display: flex; /* Enables Flexbox for layout */
+    justify-content: flex-end; /* Aligns links to the right */
+    align-items: center; /* Vertically centers links */
+    flex-wrap: nowrap; /* Prevents wrapping of navigation items */
+    gap: 20px; /* Adds space between links */
+}
+
+/* Navigation Links */
+nav a {
+    color: seashell; /* Text color */
+    text-decoration: none; /* Removes underline */
+    font-size: 22px; /* Font size */
+    font-family: Helvetica, sans-serif;
+    opacity: 0.9; /* Slight transparency */
+    white-space: nowrap; /* Prevents text from breaking onto the next line */
+}
+
+/* Responsive Navigation Bar */
+@media (max-width: 800px) {
+    nav {
+        flex-wrap: wrap; /* Allows wrapping of items when necessary */
+        justify-content: center; /* Centers the nav items on smaller screens */
+        gap: 15px; /* Reduces spacing between links for smaller screens */
+    }
+
+    nav a {
+        font-size: 18px; /* Adjusts font size for better fit */
+    }
+}
+
+nav a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Main content styling */
+/* Reset body and html margins/paddings */
+body, html {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+/* Mission Section */
+.mission-section {
+    background-size: cover; /* Makes the background fill the section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    width: 1200px; /* Matches the design spec */
+    height: 700px; /* Sets the height of the section */
+    margin: 0 auto; /* Centers the section horizontally */
+    position: relative; /* Allows positioning of child elements (e.g., overlay) */
+    text-align: center; /* Ensures text alignment within the overlay */
+}
+
+/* Overlay Box */
+.overlay-box {
+    position: absolute; /* Positions the box relative to the parent (.mission-section) */
+    top: 50%; /* Moves the box 50% down from the top */
+    left: 50%; /* Moves the box 50% from the left */
+    transform: translate(-50%, -50%); /* Centers the box perfectly */
+    background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent black background */
+    color: seashell; /* Text color for content */
+    padding: 20px 0; /* Adds vertical padding for the text */
+    border: 2px solid rgba(0, 0, 0, 0.7); /* Optional border for styling */
+    width: 1200px; /* Stretches the box to match the section width */
+    text-align: center; /* Centers the text inside the box */
+}
+
+/* Mission Header */
+#mission {
+    font-size: 40px; /* Font size for the header */
+    font-family: Helvetica, sans-serif; /* Font family */
+    font-weight: bold; /* Bold text for emphasis */
+    margin: 0; /* Removes default margin */
+    padding-bottom: 10px; /* Adds space below the header */
+}
+
+/* Subtitle */
+.overlay-box h4 {
+    font-size: 20px; /* Subtitle font size */
+    margin: 0; /* Removes default margin */
+    word-spacing: 5px; /* Adjusts spacing between words */
+}
+
+/* Featured Tea Section */
+
+/* Featured Tea Section */
+/* Featured Tea Section Layout */
+#featured-tea-section {
+    max-width: 1000px; /* Limits the section to 1000px wide */
+    margin: 0 auto; /* Centers the section horizontally */
+    padding: 20px; /* Adds padding around the section */
+    background-color: black; /* Optional: section background */
+    color: seashell; /* Text color */
+}
+
+/* Section Headers */
+.section-header {
+    text-align: center; /* Centers the headers */
+    margin-bottom: 30px; /* Adds spacing between the headers and the grid */
+}
+
+.section-header h2 {
+    font-size: 40px;
+    margin-bottom: 10px; /* Adds spacing between h2 and h4 */
+    font-family: Helvetica, sans-serif;
+}
+
+.section-header h4 {
+    font-size: 20px;
+    font-family: Helvetica, sans-serif;
+}
+
+/* Tea Items Grid */
+.tea-grid {
+    display: flex; /* Enables Flexbox for the grid layout */
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    gap: 30px; /* Reduces spacing between items in the grid */
+    justify-content: center; /* Centers items in the grid */
+}
+
+/* Tea Item Styling */
+.tea-item {
+    flex: 1 1 calc(33.333% - 20px); /* Ensures up to 3 items per row */
+    max-width: calc(33.333% - 20px); /* Prevents items from growing too large */
+    text-align: center; /* Centers content inside the item */
+}
+
+/* Tea Images */
+.tea-image {
+    width: 100%; /* Scales image to fit the container width */
+    height: 200px; /* Fixes height for uniformity */
+    object-fit: cover; /* Ensures proportional cropping */
+    margin-bottom: 10px; /* Adds space between the image and title */
+}
+
+/* Tea Titles */
+.tea-item h3 {
+    margin: 0; /* Removes default margin */
+    font-size: 20px; /* Sets font size */
+}
+
+.tea-item h3 a {
+    text-decoration: none; /* Removes underline */
+    color: seashell; /* Sets link color */
+}
+
+.tea-item h3 a:hover {
+    text-decoration: underline; /* Adds underline on hover */
+}
+
+/* Tea Items for the Last Row */
+.tea-item:nth-last-child(-n+2) {
+    margin-right: 20px; /* Removes any excess right margin */
+    margin-left: 0; /* Ensures consistent alignment */
+}
+
+/* Locations Section */
+#locations-section {
+    background-image: url('resources/images/img-locations-background.webp'); /* Background photo */
+    background-size: cover; /* Ensures the background covers the section */
+    background-position: center; /* Centers the background image */
+    height: 500px; /* Fixed height for the background */
+    max-width: 1200px; /* Limits the width of the section */
+    margin: 50px auto 0 auto; /* Adds 50px of top margin */
+    text-align: center; /* Centers the text */
+    padding-top: 20px; /* Adds spacing above the content */
+}
+
+/* Footer Info Section (Underneath Background Photo) */
+#footer-info {
+    background-color: black; /* Footer background color */
+    color: seashell; /* Text color */
+    text-align: center; /* Centers the text */
+    padding: 20px 0; /* Adds padding to the top and bottom of the section */
+    font-family: Helvetica, sans-serif; /* Sets the font style */
+    max-height: 200px; /* Fixes the total height of the footer info */
+    display: flex; /* Enables Flexbox for vertical alignment */
+    flex-direction: column; /* Stacks items vertically */
+    justify-content: center; /* Centers the content vertically */
+}
+
+/* Footer Info H2 */
+#footer-info h2 {
+    font-size: 24px; /* Sets the font size for h2 */
+    margin: 0 0 15px 0; /* Adds 15px spacing below the h2 */
+    font-weight: bold; /* Ensures the text is bold */
+    line-height: 1.5; /* Improves readability */
+}
+
+/* Footer Info H5 */
+#footer-info h5 {
+    font-size: 16px; /* Sets the font size for h5 */
+    margin: 5px 0; /* Adds consistent spacing */
+    line-height: 3; /* Improves readability */
+}
+
+
+/* Locations Header */
+#locations {
+    margin-top: 15px; /* Adds 15px space from the top */
+    color: seashell; /* Text color for the header */
+    font-size: 40px; /* Font size */
+    font-family: Helvetica, sans-serif;
+    text-align: center; /* Centers the header text */
+    opacity: 1; /* Ensures full opacity for the text */
+}
+
+/* Locations Container */
+.locations-container {
+    display: flex; /* Enables Flexbox for horizontal alignment */
+    justify-content: center; /* Centers the boxes horizontally */
+    gap: 40px; /* Adds 40px spacing between boxes */
+    margin-top: 20px; /* Adds space between the header and the boxes */
+}
+
+/* Location Boxes */
+.location-box {
+    background-color: rgba(0, 0, 0, 1); /* Semi-transparent black background */
+    width: 300px; /* Fixed width */
+    padding: 20px; /* Adds internal padding for text */
+    border: 2px solid seashell; /* Border color */
+    border-radius: 10px; /* Optional: adds rounded corners */
+    color: seashell; /* Text color */
+    text-align: center; /* Centers the text inside */
+    opacity: 1; /* Ensures full opacity for the text */
+}
+
+/* Styling for h3 headers inside the location boxes */
+.location-box h3 {
+    font-size: 24px; /* Makes the headers larger */
+    font-weight: bold; /* Ensures the headers are bold */
+    margin-bottom: 10px; /* Adds space between the header and the paragraph */
+    color: seashell; /* Keeps text color consistent */
+}
+
+/* Styling for paragraph text inside the location boxes */
+.location-box p {
+    font-size: 16px; /* Sets a smaller font size for paragraph text */
+    margin: 5px 0; /* Adds spacing between paragraphs */
+    color: seashell; /* Keeps text color consistent */
+}
+
+/* Footer (For Copyright Info) */
+footer {
+    background-color: black; /* Footer background color */
+    height: 50px; /* Keeps footer compact */
+    position: relative; /* Ensures the copyright text can be positioned */
+    display: flex; /* Aligns content easily */
+    align-items: center; /* Centers content vertically */
+}
+
+footer p {
+    position: absolute; /* Positions the copyright text */
+    bottom: 10px; /* Keeps it near the bottom */
+    left: 20px; /* Adds spacing from the left */
+    font-size: 14px; /* Smaller font size */
+    margin: 0; /* Removes default margin */
+    color: seashell; /* Text color */
+}
+
+/* Adjust scroll margin for the #mission section's h2 */
+#mission h2 {
+    scroll-margin-top: 0; /* Ensure no accidental margin interference */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any padding */
+}
+
+/* Force a specific scroll alignment for #mission */
+#mission {
+    scroll-margin-top: 120px; /* Matches the height of the fixed header, fine-tune if necessary */
+}
+
+/* General scroll offset for other headers */
+#featured-tea-section h2,
+#locations-section h2 {
+    scroll-margin-top: 70px; /* Default scroll margin for other sections */
+}
+
